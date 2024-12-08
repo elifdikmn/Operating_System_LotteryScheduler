@@ -1,0 +1,15 @@
+modifiedscheduler
+
+
+cat default1_test1.txt | grep 'u1p1' | awk 'BEGIN{total=0;num=0;}{num=num+1;total=total+$9;print $9}END{avg=total/num;print "total=", total; print"average=", avg;}'
+
+top -n 100 -d 1 -b > default1_test1.txt
+
+Host: sftp://127.0.0.1
+Username: root 
+Password: 1234 
+Port: 2222
+
+ssh -oHostKeyAlgorithms=+ssh-rsa -oKexAlgorithms=+diffie-hellman-group1-sha1 -p 2222 root@127.0.0.1
+cat d1t1.txt | grep 'u1p1' | awk 'BEGIN{total=0;num=0;}{num=num+1;total=total+$9;print $9}END{avg=total/num;print "total=", total; print"average=", avg;}'
+top -n 100 -d 1 -b > d1t1.txt
